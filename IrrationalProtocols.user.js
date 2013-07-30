@@ -16,10 +16,10 @@
         var list = parent.querySelectorAll('.js-tweet-text');
         for(var i = list.length; i--;) {
             if(list[i].innerHTML.indexOf("xkcd://") != -1){
-                list[i].innerHTML = list[i].innerHTML.replace(/(xkcd:\/\/([0-9]*))/g,xkcdLink_pre + '$2">$1</a>');
+                list[i].innerHTML = list[i].innerHTML.replace(/(xkcd:\/\/([0-9]+))/g,xkcdLink_pre + '$2">$1</a>');
             }
             if(list[i].innerHTML.indexOf("steamapp://") != -1){
-                list[i].innerHTML = list[i].innerHTML.replace(/(steamapp:\/\/([0-9]*))/g,steamStoreLink_pre + '$2">$1</a>');
+                list[i].innerHTML = list[i].innerHTML.replace(/(steamapp:\/\/([0-9]+))/g,steamStoreLink_pre + '$2">$1</a>');
             }
             if(list[i].innerHTML.indexOf("steamuser://") != -1){
                 list[i].innerHTML = list[i].innerHTML.replace(/(steamuser:\/\/(\w+))/g,steamCommunityLink_pre + '$2">$1</a>');
